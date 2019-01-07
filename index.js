@@ -13,10 +13,10 @@ bot.login(process.env.TOKEN);
 
 bot.on('message', message => {
 	
+let msg = message.content.toUpperCase();
 
 
-
-if (message.content.toUpperCase("tobyboy")) {
+if (msg = "tobyboy") {
 	const embedtoby = new Discord.RichEmbed()
 		.setAuthor(message.author.name, message.author.avatarURL)
 		.setFooter("TobyBoy " + TobyVersion)
@@ -26,7 +26,7 @@ if (message.content.toUpperCase("tobyboy")) {
 	message.channel.sendEmbed(embedtoby);
 	
 }
-if (message.content.toUpperCase().StartWith("*contact")) {
+if (msg.StartsWith("*contact")) {
 	const furbaka = guild.member(user.id("328514801124900866"));
         let args = message.content.split(" ").slice(1);
 	let thingToEcho = args.join(" ");
