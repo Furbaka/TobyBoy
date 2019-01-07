@@ -4,10 +4,8 @@ const request = require('request');
 var prefix = "*";
 var TobyVersion = "1.0.0";
 
-const serveur = bot.guilds.get("508742959399698432");
-
 bot.on('ready', () => {
-	bot.user.setActivity(serveur.array(memberCount)+ ' fanboys', { type: 'WATCHING' });
+	bot.user.setActivity(bot.users.size + ' fanboys', { type: 'WATCHING' });
 	
 });
 
