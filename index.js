@@ -20,9 +20,18 @@ let msg = message.content.toUpperCase();
 if (msg = "tobyboy") {
 	const embedtoby = new Discord.RichEmbed()
 		.setAuthor(message.author.name, message.author.avatarURL)
-		.setFooter("TobyBoy " + TobyVersion)
+		.setFooter("TobyBoy " + TobyVersion, bot.user.avatarURL)
 		.setColor("953da0")
-		.setThumbnail(bot.user.avatarURL)
+		.addField(`░░░░░░░░░░░▄▀▄▀▀▀▀▄▀▄░░░░░░░░░░░░░░░░░░
+░░░░░░░░░░░█░░░░░░░░▀▄░░░░░░▄░░░░░░░░░░
+░░░░░░░░░░█░░▀░░▀░░░░░▀▄▄░░█░█░░░░░░░░░
+░░░░░░░░░░█░▄░█▀░▄░░░░░░░▀▀░░█░░░░░░░░░
+░░░░░░░░░░█░░▀▀▀▀░░░░░░░░░░░░█░░░░░░░░░
+░░░░░░░░░░█░░░░░░░░░░░░░░░░░░█░░░░░░░░░
+░░░░░░░░░░█░░░░░░░░░░░░░░░░░░█░░░░░░░░░
+░░░░░░░░░░░█░░▄▄░░▄▄▄▄░░▄▄░░█░░░░░░░░░░
+░░░░░░░░░░░█░▄▀█░▄▀░░█░▄▀█░▄▀░░░░░░░░░░
+░░░░░░░░░░░░▀░░░▀░░░░░▀░░░▀░░░░░░░░░░░░`)
 
 	message.channel.sendEmbed(embedtoby);
 	
