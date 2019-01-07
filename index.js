@@ -50,7 +50,7 @@ if(msg.startsWith(prefix + "contact")) {
 if(msg.startsWith(prefix + "prefix")) {
 let args = message.content.split(" ").slice(1);
 let thingToEcho = args.join(" ");
-if(thingToEcho = ""){
+if(thingToEcho == ""){
 const embedprefixnull = new Discord.RichEmbed()
 	.setAuthor(message.author.name, message.author.avatarURL)
 	.setFooter("TobyBoy " + TobyVersion, bot.user.avatarURL)
