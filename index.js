@@ -17,7 +17,7 @@ bot.on('message', message => {
 
 
 	if (message.content == "tobyboy") {
-	const embedtoby = new RichEmbed()
+	const embedtoby = new Discord.RichEmbed()
 		.attachFile('https://twitter.com/i/status/1073525646326849536')
 		.setFooter("TobyBoy" + TobyVersion)
 		.setThumbnail(bot.user.AvatarURL)
