@@ -22,7 +22,7 @@ if (msg = "tobyboy") {
 		.setAuthor(message.author.name, message.author.avatarURL)
 		.setFooter("TobyBoy " + TobyVersion, bot.user.avatarURL)
 		.setColor("953da0")
-		.addField(`░░░░░░░░░░░▄▀▄▀▀▀▀▄▀▄░░░░░░░░░░░░░░░░░`)░
+		.addField(`░░░░░░░░░░░▄▀▄▀▀▀▀▄▀▄░░░░░░░░░░░░░░░░░░`)
 		.addField(`░░░░░░░░░░░█░░░░░░░░▀▄░░░░░░▄░░░░░░░░░░`)
 		.addField(`░░░░░░░░░░█░░▀░░▀░░░░░▀▄▄░░█░█░░░░░░░░░`)
 		.addField(`░░░░░░░░░░█░▄░█▀░▄░░░░░░░▀▀░░█░░░░░░░░░`)
