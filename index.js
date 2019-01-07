@@ -12,6 +12,10 @@ bot.on('ready', () => {
 bot.login(process.env.TOKEN);
 
 bot.on('message', message => {
+
+let sender = message.author;
+let cont = message.content.slice(prefix.length).split(" ");
+let args = cont.slice(1);
 	
 if(message.author.bot) return;
 	
