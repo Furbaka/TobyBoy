@@ -5,7 +5,7 @@ var prefix = "*";
 var TobyVersion = "1.0.0";
 
 bot.on('ready', () => {
-	bot.user.setActivity(bot.guilds.membercount + ' fanboys', { type: 'WATCHING' });
+	bot.user.setActivity(bot.guild.memberscount + ' fanboys', { type: 'WATCHING' });
 	
 });
 
