@@ -15,7 +15,8 @@ bot.on('message', message => {
 	
 let msg = message.content.toUpperCase();
 
-
+if (message.author.bot = false) {
+	
 if (msg = "tobyboy") {
 	const embedtoby = new Discord.RichEmbed()
 		.setAuthor(message.author.name, message.author.avatarURL)
@@ -31,5 +32,6 @@ if (msg.startsWith(prefix + "contact")) {
         let args = message.content.split(" ").slice(1);
 	let thingToEcho = args.join(" ");
 	bot.furbaka.sendMessage(thingToEcho)
+}
 }
 });
