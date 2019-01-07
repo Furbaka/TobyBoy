@@ -29,8 +29,3 @@ bot.on('message', message => {
 	
 	}
 });
-
-message.guild.members.fetch(message.author)
-  .then(member => {
-    // The member is available here.
-  });
