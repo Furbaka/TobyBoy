@@ -53,6 +53,7 @@ const embedprefixnull = new Discord.RichEmbed()
 	.setColor("953da0")
 	.setTitle("Préfix")
 	.setDescription('le préfix est défini en tant que : **${prefix}**')
+	message.channel.sendEmbed(embedprefixnull);
 	}
 
 }
