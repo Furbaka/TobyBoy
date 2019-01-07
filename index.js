@@ -21,14 +21,14 @@ if(message.author.bot) return;
 	
 let msg = message.content.toUpperCase();
 	
-if(msg.startsWith(prefix + "contact")) {
+if(msg.startsWith(`${prefix}contact`)) {
 	const furbaka = users.get("328514801124900866")
         let args = message.content.split(" ").slice(1);
 	let thingToEcho = args.join(" ");
 	bot.furbaka.sendMessage('Nouveau message : ${thingToEcho}');
 	
 }
-if(msg.startsWith(prefix + "prefix")) {
+if(msg.startsWith(`${prefix}prefix`)) {
 let args = message.content.split(" ").slice(1);
 let thingToEcho = args.join(" ");
 if(thingToEcho == ""){
