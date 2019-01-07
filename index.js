@@ -18,12 +18,12 @@ bot.on('message', message => {
 
 	if (message.content == "tobyboy") {
 	const embedtoby = new Discord.RichEmbed()
-		.setAuthor(message.author.username, message.author.AvatarURL)
+		.setAuthor(message.author.name, message.author.avatarURL)
 		.setFooter("TobyBoy " + TobyVersion)
 		.setColor("953da0")
-		.setThumbnail(bot.user.IconURL)
+		.setThumbnail(bot.user.avatarURL)
 
-	message.channel.sendEmbed(embedtoby);
+	message.TextChannel.sendEmbed(embedtoby);
 	
 	}
 });
