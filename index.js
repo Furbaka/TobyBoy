@@ -16,7 +16,7 @@ bot.on('message', message => {
 	let msg = message.content.toUpperCase();
 
 
-	if (msg === "tobyboy") {
+	if (message.content == "tobyboy") {
 	const embedtoby = new RichEmbed()
 		.attachFile('https://twitter.com/i/status/1073525646326849536')
 		.setFooter("TobyBoy" + TobyVersion)
