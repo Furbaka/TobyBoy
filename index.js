@@ -21,7 +21,7 @@ bot.on('message', message => {
 		.setAuthor(message.author.username, message.author.AvatarURL)
 		.setFooter("TobyBoy " + TobyVersion)
 		.setColor("953da0")
-		.setThumbnail(user.bot.AvatarURL)
+		.setThumbnail(bot.user.IconURL)
 
 	message.channel.sendEmbed(embedtoby);
 	
