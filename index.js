@@ -7,7 +7,7 @@ var TobyVersion = "1.0.0";
 const serveur = bot.guilds.get("508742959399698432");
 
 bot.on('ready', () => {
-	bot.user.setActivity(message.guild.memberCount + ' fanboys', { type: 'WATCHING' });
+	bot.user.setActivity(serveur.array(memberCount)+ ' fanboys', { type: 'WATCHING' });
 	
 });
 
