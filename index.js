@@ -23,7 +23,7 @@ if (msg == "tobyboy") {
 		.setColor("953da0")
 		.setThumbnail(bot.user.avatarURL)
 
-	message.TextChannel.sendEmbed(embedtoby);
+	message.channel.sendEmbed(embedtoby);
 	
 }
 if (msg.StartWith() == "*contact") {
