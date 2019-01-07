@@ -21,25 +21,6 @@ if(message.author.bot) return;
 	
 let msg = message.content.toUpperCase();
 	
-if(msg == "tobyboy") {
-	const embedtoby = new Discord.RichEmbed()
-		.setAuthor(message.author.name, message.author.avatarURL)
-		.setFooter("TobyBoy " + TobyVersion, bot.user.avatarURL)
-		.setColor("953da0")
-		.addField(`░░░░░░░░░░░▄▀▄▀▀▀▀▄▀▄░░░░░░░░░░░░░░░░░░`)
-		.addField(`░░░░░░░░░░░█░░░░░░░░▀▄░░░░░░▄░░░░░░░░░░`)
-		.addField(`░░░░░░░░░░█░░▀░░▀░░░░░▀▄▄░░█░█░░░░░░░░░`)
-		.addField(`░░░░░░░░░░█░▄░█▀░▄░░░░░░░▀▀░░█░░░░░░░░░`)
-		.addField(`░░░░░░░░░░█░░▀▀▀▀░░░░░░░░░░░░█░░░░░░░░░`)
-		.addField(`░░░░░░░░░░█░░░░░░░░░░░░░░░░░░█░░░░░░░░░`)
-		.addField(`░░░░░░░░░░█░░░░░░░░░░░░░░░░░░█░░░░░░░░░`)
-		.addField(`░░░░░░░░░░░█░░▄▄░░▄▄▄▄░░▄▄░░█░░░░░░░░░░`)
-		.addField(`░░░░░░░░░░░█░▄▀█░▄▀░░█░▄▀█░▄▀░░░░░░░░░░`)
-		.addField(`░░░░░░░░░░░░▀░░░▀░░░░░▀░░░▀░░░░░░░░░░░░`)
-
-	message.channel.sendEmbed(embedtoby);
-	
-}
 if(msg.startsWith(prefix + "contact")) {
 	const furbaka = users.get("328514801124900866")
         let args = message.content.split(" ").slice(1);
@@ -58,7 +39,7 @@ const embedprefixnull = new Discord.RichEmbed()
 	.setTitle("Préfix")
 	.setDescription('le préfix est défini en tant que : **${prefix}**')
 	message.channel.sendEmbed(embedprefixnull);
-	}
+	};
 
 }
 
