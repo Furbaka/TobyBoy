@@ -13,9 +13,9 @@ bot.login(process.env.TOKEN);
 
 bot.on('message', message => {
 	
+if(message.author.bot) return;
+	
 let msg = message.content.toUpperCase();
-
-if (message.author.bot = false) {
 	
 if (msg = "tobyboy") {
 	const embedtoby = new Discord.RichEmbed()
