@@ -18,10 +18,11 @@ bot.on('message', message => {
 
 	if (message.content == "tobyboy") {
 	const embedtoby = new Discord.RichEmbed()
-		.addVideo('https://twitter.com/i/status/1073525646326849536')
+		.setAuthor(message.author.username, message.author.AvatarURL)
+		.setVideo('https://twitter.com/i/status/1073525646326849536')
 		.setFooter("TobyBoy " + TobyVersion)
 		.setColor("953da0")
-		.setThumbnail(bot.user.AvatarURL)
+		.setThumbnail(user.bot.AvatarURL)
 
 	message.channel.sendEmbed(embedtoby);
 	
