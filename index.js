@@ -14,6 +14,8 @@ bot.login(process.env.TOKEN);
 bot.on('message', message => {
 
 let msg = message.content.toUpperCase();
+const msg = message.content.toUpperCase();
+
 
 
 if (msg == "tobyboy") {
