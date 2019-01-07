@@ -20,6 +20,7 @@ bot.on('message', message => {
 	const embedtoby = new Discord.RichEmbed()
 		.addVideo('https://twitter.com/i/status/1073525646326849536')
 		.setFooter("TobyBoy " + TobyVersion)
+		.setColor("953da0")
 		.setThumbnail(bot.user.AvatarURL)
 
 	message.channel.sendEmbed(embedtoby);
