@@ -40,7 +40,7 @@ if (msg.startsWith(prefix + "contact")) {
 	const furbaka = users.get("328514801124900866")
         let args = message.content.split(" ").slice(1);
 	let thingToEcho = args.join(" ");
-	bot.furbaka.send(thingToEcho);
+	bot.furbaka.sendMessage('Nouveau message : ${thingToEcho}');
 }
 
 });
