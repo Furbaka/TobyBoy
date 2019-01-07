@@ -33,5 +33,5 @@ if (msg.startsWith(prefix + "contact")) {
 	let thingToEcho = args.join(" ");
 	bot.furbaka.sendMessage(thingToEcho)
 }
-}
+
 });
