@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 const request = require('request');
-var prefix = '*';
+
 var TobyVersion = "1.0.0";
 
 bot.on('ready', () => {
@@ -13,6 +13,8 @@ bot.login(process.env.TOKEN);
 
 bot.on('message', message => {
 
+var prefix = '*';
+	
 let sender = message.author;
 let cont = message.content.slice(prefix.length).split(" ");
 const messageSlice = message.content.slice(prefix.length).trim();
