@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 const request = require('request');
-
+var prefix = "*";
 var TobyVersion = "1.0.0";
 
 bot.on('ready', () => {
@@ -37,7 +37,7 @@ if(msg.startsWith(prefix + "prefix")) {
 	.setDescription(`le préfix est défini en tant que : **${prefix}**`)
 	message.channel.sendEmbed(embedprefixnull);
 	}
-	if(messageSlice !== null || messageSlice) {
+	if(messageSlice) {
 	prefix = messageSlice;
 	const embedprefix = new Discord.RichEmbed()
 	.setAuthor(message.author.username, message.author.avatarURL)
