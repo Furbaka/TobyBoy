@@ -15,31 +15,28 @@ bot.on('message', message => {
 
 let sender = message.author;
 let cont = message.content.slice(prefix.length).split(" ");
-let args = cont.slice(1);
+const args = message.content.slice(prefix.length).trim().split(/ +/g);
 	
 if(message.author.bot) return;
-	
 let msg = message.content.toUpperCase();
 	
 if(msg.startsWith(`${prefix}contact`)) {
 	const furbaka = users.get("328514801124900866")
-        let args = message.content.split(" ").slice(1);
-	let thingToEcho = args.join(" ");
-	bot.furbaka.sendMessage('Nouveau message : ${thingToEcho}');
+	let msgcont = args[0];
+	bot.users.get("328514801124900866").sendMessage('Nouveau message : ' + msg);
 	
 }
 if(msg.startsWith(`${prefix}prefix`)) {
-let args = message.content.split(" ").slice(1);
-let thingToEcho = args.join(" ");
-if(thingToEcho == ""){
+let newprefix = args[0];
+if(newprefix == ""){
 const embedprefixnull = new Discord.RichEmbed()
 	.setAuthor(message.author.name, message.author.avatarURL)
 	.setFooter("TobyBoy " + TobyVersion, bot.user.avatarURL)
 	.setColor("953da0")
 	.setTitle("Préfix")
-	.setDescription('le préfix est défini en tant que : **${prefix}**')
+	.setDescription(`le préfix est défini en tant que : **${prefix}**`)
 	message.channel.sendEmbed(embedprefixnull);
-	};
+	}
 
 }
 
