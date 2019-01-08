@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 const request = require('request');
-var prefix = "*";
+var prefix = '*';
 var TobyVersion = "1.0.0";
 
 bot.on('ready', () => {
@@ -15,7 +15,7 @@ bot.on('message', message => {
 
 let sender = message.author;
 let cont = message.content.slice(prefix.length).split(" ");
-const messageSlice = message.content.slice(prefix.lenght).trim();
+const messageSlice = message.content.slice(prefix.length).trim();
 	
 if(message.author.bot) return;
 let msg = message.content.toUpperCase();
