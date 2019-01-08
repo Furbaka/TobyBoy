@@ -28,9 +28,9 @@ let msg = message.content.toUpperCase();
 //	bot.users.get("328514801124900866").sendMessage("Nouveau message : " + msgcont);	
 //}
 
-if(command == "PREFIX") {
+if(command === "PREFIX") {
 let newprefix = args[0];
-	if(args[0] == "edit"){
+	if(!args[0]){
 	const embedprefixnull = new Discord.RichEmbed()
 	.setAuthor(message.author.name, message.author.avatarURL)
 	.setFooter("TobyBoy " + TobyVersion, bot.user.avatarURL)
