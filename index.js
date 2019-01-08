@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 const request = require('request');
-var prefix = "*";
+const config = require('./config.json');
 var TobyVersion = "1.0.0";
 
 bot.on('ready', () => {
