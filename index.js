@@ -39,7 +39,7 @@ let newprefix = args[0];
 	.setDescription(`le préfix est défini en tant que : **${prefix}**`)
 	message.channel.sendEmbed(embedprefixnull);
 	}
-
+ return;
 }
 
 });
