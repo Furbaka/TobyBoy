@@ -13,38 +13,37 @@ bot.login(process.env.TOKEN);
 
 bot.on('message', message => {
 
-var prefix = "*";
 	
 let sender = message.author;
-let cont = message.content.slice(prefix.length).split(" ");
-const messageSlice = message.content.slice(prefix.length).trim();
+let cont = message.content.slice(config.prefix.length).split(" ");
+const messageSlice = message.content.slice(config.prefix.length).trim();
 	
 if(message.author.bot) return;
 let msg = message.content.toUpperCase();
 	
-if(msg.startsWith(prefix + "contact")) {
+if(msg.startsWith(config.prefix + "contact")) {
 	const furbaka = users.get("328514801124900866")
 	bot.users.get("328514801124900866").sendMessage("Nouveau message : " + messageSlice);	
 }
 
-if(msg.startsWith(prefix + "prefix")) {
+if(msg.startsWith(config.prefix + "prefix")) {
 	if(!messageSlice) {
 	const embedprefixnull = new Discord.RichEmbed()
 	.setAuthor(message.author.username, message.author.avatarURL)
 	.setFooter("TobyBoy " + TobyVersion, bot.user.avatarURL)
 	.setColor("953da0")
 	.setTitle("Préfix")
-	.setDescription(`le préfix est défini en tant que : **${prefix}**`)
+	.setDescription(`le préfix est défini en tant que : **${config.prefix}**`)
 	message.channel.sendEmbed(embedprefixnull);
 	}
 	if(messageSlice) {
-	prefix = messageSlice;
+	client.settings.set(message.guild.id, messageSlice, config.prefix);
 	const embedprefix = new Discord.RichEmbed()
 	.setAuthor(message.author.username, message.author.avatarURL)
 	.setFooter("TobyBoy " + TobyVersion, bot.user.avatarURL)
 	.setColor("953da0")
 	.setTitle("Préfix")
-	.setDescription(`le préfix à été modifié en tant que : **${prefix}**`)
+	.setDescription(`le préfix à été modifié en tant que : **${config.prefix}**`)
 	message.channel.sendEmbed(embedprefix);
 	}
 }
