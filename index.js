@@ -13,7 +13,7 @@ bot.login(process.env.TOKEN);
 
 bot.on('message', message => {
 
-var prefix = '*';
+var prefix = "*";
 	
 let sender = message.author;
 let cont = message.content.slice(prefix.length).split(" ");
