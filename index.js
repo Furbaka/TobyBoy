@@ -16,18 +16,19 @@ bot.on('message', message => {
 let sender = message.author;
 let cont = message.content.slice(prefix.length).split(" ");
 const args = message.content.slice(prefix.length).trim().split(/ +/g);
+const command = args.shift().toLowerCase();
 	
 if(message.author.bot) return;
 let msg = message.content.toUpperCase();
 	
-if(msg.startsWith(`${prefix}contact`)) {
-	const furbaka = users.get("328514801124900866")
-	let mess = msg.content.split(' ').splice(1).join(' ');
-	let msgcont = mess[0];
-	bot.users.get("328514801124900866").sendMessage("Nouveau message : " + msgcont);
-	
-}
-if(msg.startsWith(`${prefix}prefix`)) {
+//if(msg.startsWith(`${prefix}contact`)) {
+//	const furbaka = users.get("328514801124900866")
+//	let mess = msg.content.split(' ').splice(1).join(' ');
+//	let msgcont = mess[0];
+//	bot.users.get("328514801124900866").sendMessage("Nouveau message : " + msgcont);	
+//}
+
+if(command == "PREFIX") {
 let newprefix = args[0];
 	if(args[0] == "edit"){
 	const embedprefixnull = new Discord.RichEmbed()
