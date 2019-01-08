@@ -15,17 +15,15 @@ bot.on('message', message => {
 
 let sender = message.author;
 let cont = message.content.slice(prefix.length).split(" ");
-const messageSlice = message.content.slice(prefix.length).trim();
+const messageSlice = message.content.slice(prefix.lenght).trim();
 	
 if(message.author.bot) return;
 let msg = message.content.toUpperCase();
 	
-//if(msg.startsWith(`${prefix}contact`)) {
-//	const furbaka = users.get("328514801124900866")
-//	let mess = msg.content.split(' ').splice(1).join(' ');
-//	let msgcont = mess[0];
-//	bot.users.get("328514801124900866").sendMessage("Nouveau message : " + msgcont);	
-//}
+if(msg.startsWith(prefix + "contact")) {
+	const furbaka = users.get("328514801124900866")
+	bot.users.get("328514801124900866").sendMessage("Nouveau message : " + messageSlice);	
+}
 
 if(msg.startsWith(prefix + "prefix")) {
 	if(!messageSlice) {
