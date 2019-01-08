@@ -15,8 +15,7 @@ bot.on('message', message => {
 
 let sender = message.author;
 let cont = message.content.slice(prefix.length).split(" ");
-const args = message.content.slice(prefix.length).trim().split(/ +/g);
-const command = message.content.startsWith(prefix+'command');
+const messageSlice = message.content.slice(prefix.lenght).trim();
 	
 if(message.author.bot) return;
 let msg = message.content.toUpperCase();
@@ -28,9 +27,8 @@ let msg = message.content.toUpperCase();
 //	bot.users.get("328514801124900866").sendMessage("Nouveau message : " + msgcont);	
 //}
 
-if(command === "PREFIX") {
-let newprefix = args[0];
-	if(!args[0]){
+if(msg.StartsWith(`${prefix}PREFIX`) {
+	if(!messageSlice){
 	const embedprefixnull = new Discord.RichEmbed()
 	.setAuthor(message.author.name, message.author.avatarURL)
 	.setFooter("TobyBoy " + TobyVersion, bot.user.avatarURL)
