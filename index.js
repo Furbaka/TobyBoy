@@ -28,7 +28,7 @@ let msg = message.content.toUpperCase();
 //}
 
 if(msg.startsWith(`${prefix}PREFIX`)) {
-	if(!messageSlice) {
+//	if(!messageSlice) {
 	const embedprefixnull = new Discord.RichEmbed()
 	.setAuthor(message.author.name, message.author.avatarURL)
 	.setFooter("TobyBoy " + TobyVersion, bot.user.avatarURL)
@@ -36,7 +36,7 @@ if(msg.startsWith(`${prefix}PREFIX`)) {
 	.setTitle("Préfix")
 	.setDescription(`le préfix est défini en tant que : **${prefix}**`)
 	message.channel.sendEmbed(embedprefixnull);
-	}
+//	}
 }
 
 });
