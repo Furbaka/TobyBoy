@@ -35,9 +35,9 @@ if(msg.startsWith(config.prefix + "prefix")) {
 	.setTitle("Préfix")
 	.setDescription(`le préfix est défini en tant que : **${config.prefix}**`)
 	message.channel.sendEmbed(embedprefixnull);
-	}
+	} return;
 	if(messageSlice) {
-	client.settings.set(message.guild.id, messageSlice, config.prefix);
+	bot.settings.set(message.guild.id, messageSlice, config.prefix);
 	const embedprefix = new Discord.RichEmbed()
 	.setAuthor(message.author.username, message.author.avatarURL)
 	.setFooter("TobyBoy " + TobyVersion, bot.user.avatarURL)
