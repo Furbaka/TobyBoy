@@ -15,7 +15,7 @@ bot.on('message', message => {
 
 let sender = message.author;
 let cont = message.content.slice(prefix.length).split(" ");
-const messageSlice = message.content.slice(prefix.lenght).trim();
+const messageSlice = message.content.slice(prefix.length).trim();
 	
 if(message.author.bot) return;
 let msg = message.content.toUpperCase();
@@ -27,16 +27,26 @@ let msg = message.content.toUpperCase();
 //	bot.users.get("328514801124900866").sendMessage("Nouveau message : " + msgcont);	
 //}
 
-if(msg.startsWith(prefix + "PREFIX")) {
-//	if(!messageSlice) {
+if(msg.startsWith(prefix + "prefix")) {
+	if(!messageSlice) {
 	const embedprefixnull = new Discord.RichEmbed()
-	.setAuthor(message.author.name, message.author.avatarURL)
+	.setAuthor(message.author.username, message.author.avatarURL)
 	.setFooter("TobyBoy " + TobyVersion, bot.user.avatarURL)
 	.setColor("953da0")
 	.setTitle("Préfix")
 	.setDescription(`le préfix est défini en tant que : **${prefix}**`)
 	message.channel.sendEmbed(embedprefixnull);
-//	}
+	}
+	if(messageSlice) {
+	var prefix = messageSlice;
+	const embedprefix = new Discord.RichEmbed()
+	.setAuthor(message.author.username, message.author.avatarURL)
+	.setFooter("TobyBoy " + TobyVersion, bot.user.avatarURL)
+	.setColor("953da0")
+	.setTitle("Préfix")
+	.setDescription(`le préfix à été modifié en tant que : **${prefix}**`)
+	message.channel.sendEmbed(embedprefix);
+	}
 }
 
 });
