@@ -16,7 +16,7 @@ bot.on('message', message => {
 let sender = message.author;
 let cont = message.content.slice(prefix.length).split(" ");
 const args = message.content.slice(prefix.length).trim().split(/ +/g);
-const command = args.shift().toLowerCase();
+const command = message.content.startsWith(prefix+'command').toLowerCase();
 	
 if(message.author.bot) return;
 let msg = message.content.toUpperCase();
