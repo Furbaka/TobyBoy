@@ -37,8 +37,8 @@ if(msg.startsWith(prefix + "prefix")) {
 	.setDescription(`le préfix est défini en tant que : **${prefix}**`)
 	message.channel.sendEmbed(embedprefixnull);
 	}
-	if(messageSlice !== null) {
-	var prefix = messageSlice;
+	if(messageSlice !== null || messageSlice) {
+	prefix = messageSlice;
 	const embedprefix = new Discord.RichEmbed()
 	.setAuthor(message.author.username, message.author.avatarURL)
 	.setFooter("TobyBoy " + TobyVersion, bot.user.avatarURL)
