@@ -28,7 +28,7 @@ if(msg.startsWith(`${prefix}contact`)) {
 }
 if(msg.startsWith(`${prefix}prefix`)) {
 let newprefix = args[0];
-if(newprefix == ""){
+if(!newprefix){
 const embedprefixnull = new Discord.RichEmbed()
 	.setAuthor(message.author.name, message.author.avatarURL)
 	.setFooter("TobyBoy " + TobyVersion, bot.user.avatarURL)
