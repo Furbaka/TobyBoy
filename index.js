@@ -11,7 +11,7 @@ bot.on('ready', () => {
 
 bot.login(process.env.TOKEN);
 
-bot.on('message', async message => {
+bot.on("message", async message => {
 
 let sender = message.author;
 let cont = message.content.slice(prefix.length).split(" ");
