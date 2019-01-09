@@ -23,29 +23,8 @@ let msg = message.content.toUpperCase();
 	
 if(msg.startsWith(config.prefix + "contact")) {
 	const furbaka = users.get("328514801124900866")
-	bot.users.get("328514801124900866").sendMessage("Nouveau message : " + messageSlice);	
+	bot.furbaka.sendMessage("Nouveau message : " + messageSlice);	
 }
 
-if(msg.startsWith(config.prefix + "prefix")) {
-	if(!messageSlice) {
-	const embedprefixnull = new Discord.RichEmbed()
-	.setAuthor(message.author.username, message.author.avatarURL)
-	.setFooter("TobyBoy " + TobyVersion, bot.user.avatarURL)
-	.setColor("953da0")
-	.setTitle("Préfix")
-	.setDescription(`le préfix est défini en tant que : **${config.prefix}**`)
-	message.channel.sendEmbed(embedprefixnull);
-	} return;
-	if(messageSlice) {
-	bot.settings.set(message.guild.id, messageSlice, config.prefix);
-	const embedprefix = new Discord.RichEmbed()
-	.setAuthor(message.author.username, message.author.avatarURL)
-	.setFooter("TobyBoy " + TobyVersion, bot.user.avatarURL)
-	.setColor("953da0")
-	.setTitle("Préfix")
-	.setDescription(`le préfix à été modifié en tant que : **${config.prefix}**`)
-	message.channel.sendEmbed(embedprefix);
-	}
-}
 
 });
