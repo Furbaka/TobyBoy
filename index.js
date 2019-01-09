@@ -20,9 +20,8 @@ const messageSlice = message.content.slice(prefix.length).trim();
 if(message.author.bot) return;
 let msg = message.content.toUpperCase();
 	
-if(msg.startsWith(prefix + "contact")) {
-	const furbaka = users.get("328514801124900866");
-	bot.users.get("328514801124900866").send("Nouveau message : " + messageSlice);	
+if(msg.startsWith("*contact")) {
+	bot.users.get("328514801124900866").sendMessage(messageSlice);	
 }
 
 });
