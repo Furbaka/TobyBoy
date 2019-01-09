@@ -21,7 +21,7 @@ if(message.author.bot) return;
 let msg = message.content.toUpperCase();
 	
 if(msg.startsWith(prefix + "contact")) {
-	const furbaka = users.get("328514801124900866")
+	const furbaka = users.get("328514801124900866");
 	bot.furbaka.sendMessage("Nouveau message : " + messageSlice);	
 }
 
