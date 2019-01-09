@@ -11,8 +11,12 @@ bot.on('ready', () => {
 
 bot.login(process.env.TOKEN);
 
-bot.on("message", async message => {
-
+bot.on("message", async (message, error) => {
+	
+if ( error ) {
+      console.log( error );
+}
+	
 let sender = message.author;
 let cont = message.content.slice(prefix.length).split(" ");
 const messageSlice = message.content.slice(prefix.length).trim();
